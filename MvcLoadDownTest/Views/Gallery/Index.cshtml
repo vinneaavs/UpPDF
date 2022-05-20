@@ -1,0 +1,70 @@
+﻿@*
+	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@*<div class="container">
+	@using (Html.BeginForm("Index","Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+	{
+	<div class="row">
+	<div class="form-group col-md6">
+	<input type="file" class="form-control"  id="file" />
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="form-group col-md6">
+	<input type="submit" name="filesubmit" id="file"/>
+	</div>
+	</div>
+	}
+
+
+
+	</div>*@
+
+
+<h1>Upload</h1>
+<hr />
+<div class="card">
+	<div class="card-header">
+		Upload File
+	</div>
+	<div class="card-body">
+		<iv class="container">
+			<section>
+				<form class="was-validated" method="post" enctype="multipart/form-data" asp-controller="Gallery" asp-action="UploadToApp">
+					<div class="row">
+						<div class="col-md-10 form-group">
+							<div class=" col-md-10 custom-file">
+								<input type="file" class="custom-file-input" name="file" multiple required>
+								<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+								<div class="invalid-feedback">Input PDF</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-10 form-group">
+							<div class=" col-md-10 custom-file">
+								<input type="file" class="custom-file-input" name="file" multiple required>
+								<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+								<div class="invalid-feedback">Input PDF</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+					</div>
+					<hr />
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-10">
+								<input class="btn btn-primary" type="submit" value="Upload" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</section>
+	</div>
+</div>
